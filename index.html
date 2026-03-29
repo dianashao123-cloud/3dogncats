@@ -95,7 +95,9 @@
       align-items:stretch;
     }
     .hero-copy, .hero-visual{
-      background:rgba(255,253,250,.72);
+      background:
+    linear-gradient(180deg, rgba(255,255,255,.20), rgba(255,255,255,.20)),
+    url('https://link.jiyiho.cn/orfile/view.php/1256e50f98bec094004f88a866e67af7.mp4') center/cover no-repeat;
       border:1px solid rgba(36,49,58,.08);
       border-radius:30px;
       box-shadow:var(--shadow);
@@ -104,7 +106,7 @@
     }
     .hero-copy{
       padding:42px 42px 36px;
-      min-height:440px;
+      min-height:700px;
       display:flex; flex-direction:column; justify-content:center;
     }
     .eyebrow{
@@ -186,12 +188,6 @@
       position:relative; border-radius:30px; overflow:hidden;
       background:var(--card); box-shadow:var(--shadow); border:1px solid var(--line);
       display:grid; grid-template-columns: 1.12fr .88fr;
-    }
-    .feature-image{
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.08)),
-        url('https://cdn.phototourl.com/free/2026-03-26-3f8968c0-1d2a-4af4-ab8b-0e4d185b4ce3.jpg') center/cover no-repeat;
-      min-height:420px;
     }
     .feature-copy{
       padding:38px 34px;
@@ -338,30 +334,32 @@
       color:#5f6b75;
       font-size:14px;
     }
-    .admin-entry{
-      opacity:.78; cursor:pointer; user-select:none;
-      transition:.18s ease;
-    }
-    .admin-entry:hover{opacity:1; color:var(--text)}
 
-    .modal, .drawer, .toolbar, .toast, .product-modal{
-      display:none;
-    }
-    .modal.show, .drawer.show, .toolbar.show, .toast.show, .product-modal.show{
-      display:block;
-    }
-    .modal, .product-modal{
-      position:fixed; inset:0; z-index:100;
-      background:rgba(20,24,27,.34);
-      backdrop-filter: blur(8px);
-    }
-    .modal-box, .product-box{
-      position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
-      width:min(92vw, 440px);
-      background:#fffdfa; border:1px solid rgba(36,49,58,.08); border-radius:26px;
-      box-shadow:0 26px 60px rgba(20,24,27,.20);
-      padding:28px;
-    }
+.product-modal{
+  display:none;
+  position:fixed; inset:0; z-index:100;
+  background:rgba(20,24,27,.34);
+  backdrop-filter: blur(8px);
+}
+.product-modal.show{
+  display:block;
+}
+.product-box{
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+  width:min(1000px, 92vw);
+  background:#fffdfa; border:1px solid rgba(36,49,58,.08); border-radius:26px;
+  box-shadow:0 26px 60px rgba(20,24,27,.20);
+  display:grid; grid-template-columns: 1fr .95fr; gap:24px;
+  padding:24px;
+}
+    
+
+    
+
+    
+
+    
+
     .product-box{
       width:min(1000px, 92vw);
       display:grid; grid-template-columns: 1fr .95fr; gap:24px;
@@ -385,108 +383,15 @@
       border:none; border-radius:50%; background:rgba(36,49,58,.06); cursor:pointer;
     }
 
-    .form-grid{display:grid; gap:14px; margin-top:18px}
-    .field{display:grid; gap:8px}
-    .field label{font-size:13px; color:#55626d}
-    .field input, .field textarea, .field select{
-      width:100%; border:1px solid rgba(36,49,58,.12); border-radius:14px;
-      padding:12px 14px; background:#fff;
-    }
-    .field textarea{min-height:110px; resize:vertical}
-    .modal-actions{
-      display:flex; justify-content:flex-end; gap:10px; margin-top:20px;
-    }
+    
 
-    .toolbar{
-      position:fixed; left:20px; right:20px; top:88px;
-      z-index:90;
-    }
-    .toolbar-inner{
-      width:min(var(--max), calc(100% - 0px)); margin:0 auto;
-      background:rgba(255,253,250,.88);
-      border:1px solid rgba(36,49,58,.10);
-      box-shadow:0 18px 40px rgba(36,49,58,.10);
-      backdrop-filter: blur(14px);
-      border-radius:18px;
-      padding:12px 14px;
-      display:flex; justify-content:space-between; gap:12px; align-items:center; flex-wrap:wrap;
-    }
-    .toolbar-left{
-      display:flex; align-items:center; gap:10px; color:#46535d; font-size:14px;
-    }
-    .toolbar-right{
-      display:flex; gap:10px; flex-wrap:wrap;
-    }
-    .btn.small{
-      padding:10px 14px; font-size:14px;
-    }
+    
 
-    .drawer{
-      position:fixed; top:0; right:0; width:min(430px, 100vw); height:100vh; z-index:95;
-      background:#fffdfa;
-      border-left:1px solid rgba(36,49,58,.10);
-      box-shadow:-20px 0 40px rgba(36,49,58,.10);
-      overflow:auto;
-    }
-    .drawer-inner{padding:22px 20px 120px}
-    .drawer-header{
-      display:flex; justify-content:space-between; align-items:center; gap:12px;
-      margin-bottom:18px;
-    }
-    .drawer-header h3{margin:0; font-size:22px}
-    .drawer-section{
-      border:1px solid rgba(36,49,58,.08);
-      border-radius:18px;
-      padding:16px;
-      margin-bottom:16px;
-      background:rgba(255,255,255,.65);
-    }
-    .inline-2{
-      display:grid; grid-template-columns:1fr 1fr; gap:12px;
-    }
-    .product-list{
-      display:grid; gap:10px;
-    }
-    .product-item{
-      border:1px solid rgba(36,49,58,.08);
-      border-radius:14px; padding:12px 12px;
-      display:flex; justify-content:space-between; gap:10px; align-items:flex-start;
-      background:#fff;
-      cursor:pointer;
-    }
-    .product-item.active{
-      border-color:rgba(95,127,153,.45);
-      background:rgba(95,127,153,.06);
-    }
-    .product-item small{display:block; color:var(--muted); margin-top:4px}
-    .tiny-actions{
-      display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;
-    }
-    .ghost-btn{
-      border:1px solid rgba(36,49,58,.10);
-      background:#fff; border-radius:999px; padding:8px 12px; cursor:pointer;
-    }
+    
 
-    .editable.admin-outline{
-      outline:1.5px dashed rgba(95,127,153,.38);
-      outline-offset:8px;
-      cursor:pointer;
-      transition:.18s ease;
-    }
-    .editable.admin-outline:hover{
-      outline-color:rgba(95,127,153,.70);
-    }
+    
 
-    .toast{
-      position:fixed; left:50%; bottom:28px; transform:translateX(-50%);
-      z-index:120;
-    }
-    .toast-inner{
-      background:#24313a; color:white; border-radius:999px;
-      padding:12px 18px; box-shadow:0 18px 40px rgba(36,49,58,.18);
-      font-size:14px;
-    }
-
+    
 
     #featured{
       padding-bottom: 28px;
@@ -624,12 +529,15 @@
       .product-box{grid-template-columns:1fr}
       .thumb-row{grid-template-columns:repeat(3,1fr)}
     }
+    .hero-copy{
+  color:rgb(236, 234, 234);
+}
   </style>
 </head>
 <body>
   <div class="topbar">
     <div class="container nav">
-      <div class="brand editable" data-edit="site">
+      <div class="brand">
         <div class="brand-mark" id="brandMark"><span id="brandMarkText">DQ</span></div>
         <div class="brand-text">
           <h1 id="siteName">德强学校</h1>
@@ -648,26 +556,13 @@
   <main>
     <section class="hero" id="top">
       <div class="container hero-wrap">
-        <div class="hero-copy editable" data-edit="hero">
+        <div class="hero-copy">
           <div class="eyebrow" id="heroEyebrow">Harbin · School Merchandise</div>
           <h2 class="hero-title serif" id="heroTitle">把一点校园记忆，带回日常生活。</h2>
           <p class="hero-desc" id="heroDesc">以低饱和、柔和且有设计感的方式，展示属于学校的玩偶、文具、配饰与生活家居。这里不是喧闹电商首页，而是一座安静、精致、带一点童趣的校园文创馆。</p>
           <div class="hero-actions">
             <a class="btn primary" href="#featured" id="heroBtn1">查看主打产品</a>
             <a class="btn secondary" href="#products" id="heroBtn2">浏览全部产品</a>
-          </div>
-          <div class="hero-meta">
-            <div class="meta-card">
-              <strong id="meta1Num">4</strong>
-              <span id="meta1Label">核心分类</span>
-            </div>
-            <div class="meta-card">
-              <strong id="meta2Num">12</strong>
-              <span id="meta2Label">精选单品</span>
-            </div>
-            <div class="meta-card">
-              <strong id="meta3Num">1</strong>
-              <span id="meta3Label">校园记忆系列</span>
             </div>
           </div>
         </div>
@@ -676,7 +571,7 @@
 
     <section id="featured">
       <div class="container">
-        <div class="section-head editable" data-edit="featured">
+        <div class="section-head">
           <div>
             <h2 class="serif" id="featuredTitle">主打系列</h2>
             <p id="featuredDesc">优先呈现具有校园识别度、情绪价值与礼赠属性的主打单品。主打产品独立陈列，不与常规产品混排。</p>
@@ -688,7 +583,7 @@
 
     <section id="products">
       <div class="container">
-        <div class="section-head editable" data-edit="catalog">
+        <div class="section-head">
           <div>
             <h2 class="serif" id="catalogTitle">全部产品</h2>
             <p id="catalogDesc">按分类浏览玩偶、文具、配饰与生活家居。页面默认仅展示上架产品，售罄产品可选择保留展示并标记状态。</p>
@@ -702,18 +597,18 @@
 
     <section id="story">
       <div class="container">
-        <div class="section-head editable" data-edit="storyHead">
+        <div class="section-head">
           <div>
             <h2 class="serif" id="storyTitle">品牌与校园故事</h2>
             <p id="storyDesc">文创不只是商品，更是校园气质、记忆片段与日常陪伴方式的延展。通过温柔材质、熟悉符号与克制排版，把学校的情绪留在生活里。</p>
           </div>
         </div>
         <div class="story-grid">
-          <div class="story-card soft-blue editable" data-edit="storyA">
+          <div class="story-card soft-blue">
             <h3 class="serif" id="storyATitle">像一本被翻开的校园画册</h3>
             <p id="storyAText">我们希望网站像一本安静的画册：留白充足、图像精致、文字克制，让用户在浏览产品时先感受到校园的温度，而不是促销感。主色以米白、雾蓝、酒红点缀，保留一点高级童趣。</p>
           </div>
-          <div class="story-card soft-red editable" data-edit="storyB">
+          <div class="story-card soft-red">
             <h3 class="serif" id="storyBTitle">把校园带回日常</h3>
             <p id="storyBText">从玩偶到书写工具，从钥匙链到生活小物，所有产品都围绕“可陪伴、可使用、可纪念”展开。它们不是单纯被售卖的物件，而是承载学校记忆的小型情绪容器。</p>
           </div>
@@ -723,14 +618,14 @@
 
     <section id="contact">
       <div class="container">
-        <div class="section-head editable" data-edit="contactHead">
+        <div class="section-head">
           <div>
             <h2 class="serif" id="contactTitle">购买方式</h2>
             <p id="contactDesc">这里可以展示校内购买点、咨询方式、微信二维码说明、发货与领取方式等。作为写死前端网页，当前示例以静态信息展示为主。</p>
           </div>
         </div>
         <div class="contact-card">
-          <div class="contact-panel editable" data-edit="contactInfo">
+          <div class="contact-panel">
             <h4 id="contactPanelTitle">咨询与购买信息</h4>
             <div class="contact-list">
               <div class="contact-item"><span class="muted">咨询微信</span><strong id="contactWechat">DEQIANG-STORE</strong></div>
@@ -739,7 +634,7 @@
               <div class="contact-item"><span class="muted">发货说明</span><strong id="contactShip">支持校内领取与统一邮寄</strong></div>
             </div>
           </div>
-          <div class="contact-panel editable" data-edit="contactNote">
+          <div class="contact-panel">
             <h4 id="contactNoteTitle">购买须知</h4>
             <p class="muted" id="contactNoteText">可在此处填写购买时间、限量说明、是否支持预订、是否接受定制、节日礼盒发售安排等。管理员可在伪后台中直接修改这些信息并保存到本地浏览器。</p>
             <div class="tiny-actions" style="margin-top:20px;">
@@ -753,70 +648,12 @@
 
   <footer>
     <div class="container footer-wrap">
-      <div class="editable" data-edit="footer">
+      <div class="editable">
         <span id="footerText">© 2026 德强学校文创馆 · Official Merchandise Showcase</span>
       </div>
-      <div class="admin-entry" id="adminEntry">管理员入口</div>
+      
     </div>
   </footer>
-
-  <div class="modal" id="loginModal">
-    <div class="modal-box">
-      <button class="close-x" type="button" id="closeLogin">×</button>
-      <h3 class="serif" style="margin:0 0 8px;">管理员登录</h3>
-      <div class="muted">输入固定账号与密码，进入前端伪后台编辑界面。</div>
-      <div class="form-grid">
-        <div class="field">
-          <label>用户名</label>
-          <input id="loginUser" placeholder="请输入用户名" />
-        </div>
-        <div class="field">
-          <label>密码</label>
-          <input id="loginPass" type="password" placeholder="请输入密码" />
-        </div>
-      </div>
-      <div class="modal-actions">
-        <button class="btn secondary" type="button" id="cancelLogin">取消</button>
-        <button class="btn primary" type="button" id="submitLogin">进入编辑模式</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="toolbar" id="toolbar">
-    <div class="toolbar-inner">
-      <div class="toolbar-left">
-        <strong>管理员模式</strong>
-        <span class="muted" id="saveStateText">当前修改仅保存在本地浏览器</span>
-      </div>
-      <div class="toolbar-right">
-        <button class="btn secondary small" id="addProductBtn">新增产品</button>
-        <button class="btn secondary small" id="exportBtn">导出 JSON</button>
-        <button class="btn secondary small" id="importBtn">导入 JSON</button>
-        <button class="btn secondary small" id="resetBtn">恢复默认</button>
-        <button class="btn primary small" id="saveBtn">保存</button>
-        <button class="btn secondary small" id="logoutBtn">退出</button>
-        <input type="file" id="importInput" accept="application/json" style="display:none" />
-      </div>
-    </div>
-  </div>
-
-  <aside class="drawer" id="editorDrawer">
-    <div class="drawer-inner">
-      <div class="drawer-header">
-        <h3 class="serif" id="drawerTitle">编辑面板</h3>
-        <button class="close-x" type="button" id="closeDrawer" style="position:static;">×</button>
-      </div>
-
-      <div class="drawer-section" id="sectionEditorWrap">
-        <div class="muted">点击页面中带虚线框的区块进行编辑，或在下方选择产品进行管理。</div>
-      </div>
-
-      <div class="drawer-section">
-        <h4 style="margin:0 0 12px;">产品管理</h4>
-        <div class="product-list" id="adminProductList"></div>
-      </div>
-    </div>
-  </aside>
 
   <div class="product-modal" id="productModal">
     <div class="product-box">
@@ -831,10 +668,6 @@
         <p class="muted" id="modalShort"></p>
         <p id="modalLong" style="margin-top:18px;"></p>
         <div style="margin-top:20px;display:grid;gap:10px;">
-          <div class="tiny-actions" id="modalAdminActions" style="display:none;">
-            <button type="button" class="ghost-btn" id="modalEditBtn">编辑此产品</button>
-            <button type="button" class="ghost-btn" id="modalDeleteBtn">删除此产品</button>
-          </div>
           <div><span class="muted">分类：</span><strong id="modalCategory"></strong></div>
           <div><span class="muted">材质：</span><strong id="modalMaterial"></strong></div>
           <div><span class="muted">尺寸：</span><strong id="modalSize"></strong></div>
@@ -844,16 +677,8 @@
     </div>
   </div>
 
-  <div class="toast" id="toast">
-    <div class="toast-inner" id="toastText">已保存</div>
-  </div>
-
+  
   <script>
-    const STORAGE_KEY = "deqiang_merch_site_data_v1";
-    const ADMIN_KEY = "deqiang_merch_is_admin";
-    const ADMIN_USER = "三狗三猫";
-    const ADMIN_PASS = "001231";
-
     const defaultData = {
       site: {
         siteName: "德强学校文创馆",
@@ -863,43 +688,31 @@
         footerText: "© 2026 德强学校文创馆 · Official Merchandise Showcase"
       },
       hero: {
-        eyebrow: "Harbin · School Merchandise",
-        title: "把一点校园记忆，带回日常生活。",
-        desc: "以低饱和、柔和且有设计感的方式，展示属于学校的玩偶、文具、配饰与生活家居。这里不是喧闹电商首页，而是一座安静、精致、带一点童趣的校园文创馆。",
+        eyebrow: "Harbin · OFFICIAL Merchandise",
+        title: "STUDY WITH ME",
+        desc: "to张尚清：这里需要拟一段话",
         btn1: "查看主打产品",
         btn2: "浏览全部产品",
-        meta1Num: "4",
-        meta1Label: "核心分类",
-        meta2Num: "12",
-        meta2Label: "精选单品",
-        meta3Num: "1",
-        meta3Label: "校园记忆系列",
-        chip: "2026 主打推荐",
-        noteTitle: "低饱和 · 高级童趣",
-        noteText: "用更克制的色彩与留白，传达校园文创的温柔与陪伴感。",
-        featureTitle: "Soft Campus Mood",
-        featureText: "柔和、精致、轻童趣，让产品像一本可以翻阅的校园画册。",
-        visualImage: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0ff?auto=format&fit=crop&w=1200&q=80"
       },
       featured: {
         title: "主打系列",
-        desc: "优先呈现具有校园识别度、情绪价值与礼赠属性的主打单品。主打产品独立陈列，不与常规产品混排。"
+        desc: "to张尚清：这里需要拟一段话。"
       },
       catalog: {
         title: "全部产品",
-        desc: "按分类浏览玩偶、文具、配饰与生活家居。页面默认仅展示上架产品，售罄产品可选择保留展示并标记状态。"
+        desc: "to张尚清：这里需要拟一段话。"
       },
       storyHead: {
         title: "品牌与校园故事",
-        desc: "文创不只是商品，更是校园气质、记忆片段与日常陪伴方式的延展。通过温柔材质、熟悉符号与克制排版，把学校的情绪留在生活里。"
+        desc: "to张尚清：这里需要拟一段话。标题也可以改。"
       },
       storyA: {
         title: "像一本被翻开的校园画册",
-        text: "我们希望网站像一本安静的画册：留白充足、图像精致、文字克制，让用户在浏览产品时先感受到校园的温度，而不是促销感。主色以米白、雾蓝、酒红点缀，保留一点高级童趣。"
+        text: "to张尚清：这里需要拟一段话。标题也可以改。"
       },
       storyB: {
         title: "把校园带回日常",
-        text: "从玩偶到书写工具，从钥匙链到生活小物，所有产品都围绕“可陪伴、可使用、可纪念”展开。它们不是单纯被售卖的物件，而是承载学校记忆的小型情绪容器。"
+        text: "to张尚清：这里需要拟一段话。标题也可以改。"
       },
       contactHead: {
         title: "购买方式",
@@ -907,24 +720,24 @@
       },
       contactInfo: {
         panelTitle: "咨询与购买信息",
-        wechat: "DEQIANG-STORE",
-        email: "design@deqiang-school.com",
+        wechat: "暂无",
+        email: "暂无",
         pickup: "文创展示室 / 校园服务中心",
         ship: "支持校内领取与统一邮寄"
       },
       contactNote: {
         title: "购买须知",
-        text: "可在此处填写购买时间、限量说明、是否支持预订、是否接受定制、节日礼盒发售安排等。管理员可在伪后台中直接修改这些信息并保存到本地浏览器。",
+        text: "（可在此处填写购买时间、限量说明、是否支持预订、是否接受定制、节日礼盒发售安排等。）",
         btn: "返回顶部"
       },
       categories: ["全部", "玩偶", "文具", "配饰", "生活家居"],
       products: [
         {
           id: "p1",
-          name: "校园小熊玩偶",
+          name: "Baby Teddy",
           shortDesc: "温柔短毛绒材质，适合作为毕业季与节日礼赠。",
-          longDesc: "主打校园陪伴感的玩偶系列，采用柔和配色与简洁轮廓，既保留童趣，又不失文创陈列的精致感。适合作为桌面摆件、礼盒核心单品或活动纪念款。",
-          price: "¥129",
+          longDesc: "to zsq：这里需要一段介绍",
+          price: "¥65",
           category: "玩偶",
           featured: true,
           visible: true,
@@ -932,70 +745,66 @@
           tag: "主打",
           material: "短毛绒 / 刺绣 / 填充棉",
           size: "约 28cm",
-          cover: "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=900&q=80",
+          cover: "https://cdn.phototourl.com/free/2026-03-26-3f8968c0-1d2a-4af4-ab8b-0e4d185b4ce3.jpg",
           images: [
-            "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1523293834578-7b89b7ddb34d?auto=format&fit=crop&w=1200&q=80"
+            "https://cdn.phototourl.com/free/2026-03-26-3f8968c0-1d2a-4af4-ab8b-0e4d185b4ce3.jpg"
           ],
           sortOrder: 1
         },
         {
           id: "p2",
-          name: "校园小鹿玩偶",
-          shortDesc: "轻童趣风格，适合做主视觉陈列与节庆限定。",
-          longDesc: "以更克制的颜色与材质处理去平衡童趣，适合做学校形象延展、礼盒套装搭配或主题系列主角。既有陪伴感，又能融入更高级的文创氛围。",
-          price: "¥139",
-          category: "玩偶",
+          name: "椰壳香薰",
+          shortDesc: "来一句话",
+          longDesc: "来一句话。",
+          price: "¥65",
+          category: "生活家居",
           featured: true,
           visible: true,
           status: "在售",
           tag: "NEW",
-          material: "绒布 / 刺绣 / 填充棉",
-          size: "约 30cm",
-          cover: "https://images.unsplash.com/photo-1523293834578-7b89b7ddb34d?auto=format&fit=crop&w=900&q=80",
+          material: "椰壳/大豆蜡",
+          size: "约15cm",
+          cover: "https://cdn.phototourl.com/member/2026-03-26-b2ef4062-3fd8-47d5-81ac-f086f38d8f01.jpg",
           images: [
-            "https://images.unsplash.com/photo-1523293834578-7b89b7ddb34d?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1513475382585-d06e58bcb0ff?auto=format&fit=crop&w=1200&q=80",
-            "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=1200&q=80"
+            "https://cdn.phototourl.com/member/2026-03-26-b2ef4062-3fd8-47d5-81ac-f086f38d8f01.jpg "
           ],
           sortOrder: 2
         },
         {
           id: "p3",
-          name: "校园插画笔记本",
+          name: "纪念徽章",
           shortDesc: "封面以低饱和插画呈现校园意象，适合日常记录。",
           longDesc: "将校园建筑、书本、操场与吉祥物元素转化为更精致的封面语言，适合搭配书签、贴纸、手提袋组成文具系列。",
-          price: "¥39",
-          category: "文具",
+          price: "¥35",
+          category: "配饰",
           featured: false,
           visible: true,
           status: "在售",
-          tag: "文具",
-          material: "纸张 / 烫印 / 哑粉封面",
-          size: "A5",
-          cover: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80",
+          tag: "配饰",
+          material: " 金属/ 烤漆",
+          size: "2.5*2.5 cm",
+          cover: "https://cdn.phototourl.com/member/2026-03-26-10609ba6-8ada-4189-be5e-d50ee043f1da.jpg",
           images: [
-            "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1200&q=80"
+            "https://link.jiyiho.cn/orfile/view.php/371cff213d213a989cd106a534d8b94a.jpg"
           ],
           sortOrder: 3
         },
         {
           id: "p4",
-          name: "德强书签套装",
+          name: "Baby Dear",
           shortDesc: "适合礼赠与节庆活动的小型传播单品。",
           longDesc: "以轻量、精致、易传播为目标打造的书签套装，适合与笔记本、礼袋搭配组成完整的校园文创组合。",
-          price: "¥29",
-          category: "文具",
+          price: "¥65",
+          category: "玩偶",
           featured: false,
           visible: true,
           status: "在售",
-          tag: "Gift",
-          material: "铜版纸 / 局部烫金",
+          tag: "玩偶",
+          material: "短毛绒 / 刺绣 / 填充棉",
           size: "4 枚 / 盒",
-          cover: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80",
+          cover: "https://cdn.phototourl.com/member/2026-03-26-4ecd325b-c651-469e-a615-e30f96c87870.png",
           images: [
-            "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80"
+            "https://cdn.phototourl.com/member/2026-03-26-4ecd325b-c651-469e-a615-e30f96c87870.png"
           ],
           sortOrder: 4
         },
@@ -1078,88 +887,15 @@
       ]
     };
 
-    let data = loadData();
-    let isAdmin = localStorage.getItem(ADMIN_KEY) === "true";
+    let data = JSON.parse(JSON.stringify(defaultData));
     let currentCategory = "全部";
-    let currentEditKey = null;
-    let currentProductId = null;
-    let dirty = false;
 
-    function deepClone(obj){ return JSON.parse(JSON.stringify(obj)); }
-
-    function loadData(){
-      try{
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if(raw) return JSON.parse(raw);
-      }catch(e){}
-      return deepClone(defaultData);
-    }
-
-    function saveData(){
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-      dirty = false;
-      updateSaveState();
-      showToast("已保存到本地浏览器");
-    }
-
-    function resetData(){
-      data = deepClone(defaultData);
-      renderAll();
-      dirty = true;
-      updateSaveState();
-      showToast("已恢复默认内容");
-    }
-
-    function markDirty(){
-      dirty = true;
-      updateSaveState();
-    }
-
-    function updateSaveState(){
-      const el = document.getElementById("saveStateText");
-      if(!el) return;
-      el.textContent = dirty ? "有未保存修改" : "当前修改仅保存在本地浏览器";
-    }
-
-    function showToast(text){
-      const toast = document.getElementById("toast");
-      document.getElementById("toastText").textContent = text;
-      toast.classList.add("show");
-      clearTimeout(showToast.timer);
-      showToast.timer = setTimeout(() => toast.classList.remove("show"), 1800);
-    }
-
-    function setBg(id, url){
+    function text(id, value){
       const el = document.getElementById(id);
-      if(el) el.style.backgroundImage = `linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.08)), url('${url}')`;
+      if(el) el.textContent = value ?? "";
     }
 
-    function renderHero(){
-  const h = data.hero;
-  text("heroEyebrow", h.eyebrow);
-  text("heroTitle", h.title);
-  text("heroDesc", h.desc);
-  text("heroBtn1", h.btn1);
-  text("heroBtn2", h.btn2);
-  text("meta1Num", h.meta1Num);
-  text("meta1Label", h.meta1Label);
-  text("meta2Num", h.meta2Num);
-  text("meta2Label", h.meta2Label);
-  text("meta3Num", h.meta3Num);
-  text("meta3Label", h.meta3Label);
-
-  const bg = document.getElementById("heroVisualBg");
-  if(bg){
-    text("heroChip", h.chip);
-    text("heroNoteTitle", h.noteTitle);
-    text("heroNoteText", h.noteText);
-    text("heroFeatureTitle", h.featureTitle);
-    text("heroFeatureText", h.featureText);
-    bg.style.backgroundImage = `linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.36)), url('${h.visualImage}')`;
-  }
-}
-
-function renderSite(){
+    function renderSite(){
       text("siteName", data.site.siteName);
       text("siteSub", data.site.siteSub);
       text("footerText", data.site.footerText);
@@ -1174,6 +910,21 @@ function renderSite(){
           brandMark.classList.remove("has-image");
         }
       }
+    }
+
+    function renderHero(){
+      const h = data.hero;
+      text("heroEyebrow", h.eyebrow);
+      text("heroTitle", h.title);
+      text("heroDesc", h.desc);
+      text("heroBtn1", h.btn1);
+      text("heroBtn2", h.btn2);
+      text("meta1Num", h.meta1Num);
+      text("meta1Label", h.meta1Label);
+      text("meta2Num", h.meta2Num);
+      text("meta2Label", h.meta2Label);
+      text("meta3Num", h.meta3Num);
+      text("meta3Label", h.meta3Label);
     }
 
     function renderSections(){
@@ -1226,7 +977,7 @@ function renderSite(){
         .sort((a,b)=>(a.sortOrder||999)-(b.sortOrder||999));
       wrap.innerHTML = "";
       if(!featured.length){
-        wrap.innerHTML = '<div class="mini-card" style="padding:22px;">暂无主打产品，请在管理员模式中设置。</div>';
+        wrap.innerHTML = '<div class="mini-card" style="padding:22px;">暂无主打产品。</div>';
         return;
       }
 
@@ -1241,7 +992,7 @@ function renderSite(){
             <p>${p.longDesc || p.shortDesc}</p>
             <div class="price">${p.price}</div>
             <div class="featured-actions">
-              <button class="btn primary" type="button" data-open-product="${p.id}">${isAdmin ? "产品详情" : "查看详情"}</button>
+              <button class="btn primary" type="button" data-open-product="${p.id}">查看详情</button>
             </div>
           </div>
         `;
@@ -1274,12 +1025,6 @@ function renderSite(){
           handleProductCardClick(id);
         });
       });
-      wrap.querySelectorAll("[data-delete-product]").forEach(btn=>{
-        btn.addEventListener("click", (e)=>{
-          e.stopPropagation();
-          deleteProductById(e.currentTarget.getAttribute("data-delete-product"));
-        });
-      });
     }
 
     function renderProducts(){
@@ -1306,66 +1051,10 @@ function renderSite(){
         card.onclick = ()=>handleProductCardClick(p.id);
         wrap.appendChild(card);
       });
-      wrap.querySelectorAll("[data-edit-product]").forEach(btn=>{
-        btn.onclick = (e)=>{ e.stopPropagation(); handleProductCardClick(btn.dataset.editProduct); };
-      });
-      wrap.querySelectorAll("[data-delete-product]").forEach(btn=>{
-        btn.onclick = (e)=>{ e.stopPropagation(); deleteProductById(btn.dataset.deleteProduct); };
-      });
-    }
-
-    function renderAdminProductList(){
-      const wrap = document.getElementById("adminProductList");
-      wrap.innerHTML = "";
-      data.products
-        .slice()
-        .sort((a,b)=>(a.sortOrder||999)-(b.sortOrder||999))
-        .forEach(p=>{
-          const item = document.createElement("div");
-          item.className = "product-item" + (currentProductId === p.id ? " active" : "");
-          item.innerHTML = `
-            <div style="flex:1;">
-              <strong>${p.name}</strong>
-              <small>${p.category} · ${p.price} · ${p.visible ? "显示" : "隐藏"}${p.featured ? " · 主打" : ""}</small>
-            </div>
-            <div style="display:grid;gap:8px;justify-items:end;">
-              <div class="muted">${p.sortOrder || "-"}</div>
-              <div style="display:flex;gap:6px;">
-                <button type="button" class="ghost-btn admin-edit-btn" data-id="${p.id}">编辑</button>
-                <button type="button" class="ghost-btn admin-delete-btn" data-id="${p.id}">删</button>
-              </div>
-            </div>
-          `;
-          item.onclick = (e)=>{
-            if(e.target.closest("button")) return;
-            openProductEditor(p.id);
-          };
-          wrap.appendChild(item);
-        });
-      wrap.querySelectorAll('.admin-edit-btn').forEach(btn=> btn.onclick = (e)=>{ e.stopPropagation(); openProductEditor(btn.dataset.id); });
-      wrap.querySelectorAll('.admin-delete-btn').forEach(btn=> btn.onclick = (e)=>{ e.stopPropagation(); deleteProductById(btn.dataset.id); });
-    }
-
-
-    function deleteProductById(id){
-      const p = data.products.find(x=>x.id===id);
-      if(!p) return;
-      if(!confirm(`确认删除“${p.name}”？`)) return;
-      data.products = data.products.filter(x=>x.id!==id);
-      if(currentProductId === id) currentProductId = null;
-      renderAll();
-      document.getElementById("sectionEditorWrap").innerHTML = '<div class="muted">产品已删除。可继续选择其他产品编辑。</div>';
-      markDirty();
-      showToast("已删除产品");
     }
 
     function handleProductCardClick(id){
-      if(isAdmin){
-        document.getElementById("editorDrawer").classList.add("show");
-        openProductEditor(id);
-      }else{
-        openProductModal(id);
-      }
+      openProductModal(id);
     }
 
     function openProductModal(id){
@@ -1382,22 +1071,11 @@ function renderSite(){
       text("modalStatus", p.status);
       const main = document.getElementById("modalMainImage");
       main.style.backgroundImage = `url('${(p.images && p.images[0]) || p.cover}')`;
-      const adminActions = document.getElementById("modalAdminActions");
-      adminActions.style.display = isAdmin ? "flex" : "none";
-      if(isAdmin){
-        document.getElementById("modalEditBtn").onclick = ()=>{ closeProductModal(); document.getElementById("editorDrawer").classList.add("show"); openProductEditor(id); };
-        document.getElementById("modalDeleteBtn").onclick = ()=>{ closeProductModal(); deleteProductById(id); };
-      }
       document.getElementById("productModal").classList.add("show");
     }
 
     function closeProductModal(){
       document.getElementById("productModal").classList.remove("show");
-    }
-
-    function text(id, value){
-      const el = document.getElementById(id);
-      if(el) el.textContent = value ?? "";
     }
 
     function renderAll(){
@@ -1406,491 +1084,15 @@ function renderSite(){
       renderSections();
       renderFeatured();
       renderProducts();
-      renderAdminProductList();
-      syncAdminUI();
     }
 
-    function syncAdminUI(){
-      document.getElementById("toolbar").classList.toggle("show", isAdmin);
-      document.getElementById("editorDrawer").classList.toggle("show", isAdmin);
-      document.querySelectorAll(".editable").forEach(el=>{
-        el.classList.toggle("admin-outline", isAdmin);
-      });
-    }
-
-    function openLogin(){
-      document.getElementById("loginModal").classList.add("show");
-    }
-    function closeLogin(){
-      document.getElementById("loginModal").classList.remove("show");
-    }
-
-    function login(){
-      const u = document.getElementById("loginUser").value.trim();
-      const p = document.getElementById("loginPass").value.trim();
-      if(u === ADMIN_USER && p === ADMIN_PASS){
-        isAdmin = true;
-        localStorage.setItem(ADMIN_KEY, "true");
-        closeLogin();
-        syncAdminUI();
-        showToast("已进入管理员模式");
-      }else{
-        showToast("用户名或密码错误");
-      }
-    }
-
-    function logout(){
-      isAdmin = false;
-      localStorage.removeItem(ADMIN_KEY);
-      syncAdminUI();
-      showToast("已退出管理员模式");
-    }
-
-    function field(label, name, value, type="text"){
-      if(type === "textarea"){
-        return `<div class="field"><label>${label}</label><textarea name="${name}">${escapeHtml(value || "")}</textarea></div>`;
-      }
-      return `<div class="field"><label>${label}</label><input name="${name}" type="${type}" value="${escapeHtml(value || "")}" /></div>`;
-    }
-
-    function imageUploadField(label, name, value=""){
-      return `<div class="field">
-        <label>${label}</label>
-        <div class="upload-panel">
-          <div class="upload-preview" id="${name}Preview" style="background-image:${value ? `url('${escapeAttr(value)}')` : 'none'}"></div>
-          <div class="inline-2">
-            <input type="file" accept="image/*" id="${name}File" />
-            <input type="text" name="${name}" value="${escapeHtml(value || "")}" placeholder="上传后会自动写入，无需再填 URL" />
-          </div>
-          <div class="hint">可直接上传图片。图片会转成 base64 并保存在当前浏览器里。</div>
-        </div>
-      </div>`;
-    }
-
-    function multiImageUploadField(label, name, values=[]){
-      const items = (values || []).map((url, index)=>`
-        <div class="upload-preview-item" style="background-image:url('${escapeAttr(url)}')">
-          <button type="button" data-action="remove-image" data-index="${index}" title="删除这张图">×</button>
-        </div>
-      `).join("");
-      return `<div class="field">
-        <label>${label}</label>
-        <div class="upload-panel">
-          <div class="upload-preview multi" id="${name}Preview">${items}</div>
-          <input type="file" accept="image/*" id="${name}Files" multiple />
-          <textarea name="${name}" placeholder="上传后会自动写入，也可保留已有内容">${escapeHtml((values || []).join("\n"))}</textarea>
-          <div class="hint">可一次上传多张。下方文本框每行一张图片数据，通常无需手动修改。</div>
-        </div>
-      </div>`;
-    }
-
-    function fileToDataURL(file){
-      return new Promise((resolve, reject)=>{
-        const reader = new FileReader();
-        reader.onload = ()=> resolve(reader.result);
-        reader.onerror = ()=> reject(new Error("图片读取失败"));
-        reader.readAsDataURL(file);
-      });
-    }
-
-    function bindSingleImageUpload(fileInputId, textInputName, previewId){
-      const fileInput = document.getElementById(fileInputId);
-      const textInput = document.querySelector(`[name="${textInputName}"]`);
-      const preview = document.getElementById(previewId);
-      if(!fileInput || !textInput || !preview) return;
-      fileInput.onchange = async ()=>{
-        const file = fileInput.files && fileInput.files[0];
-        if(!file) return;
-        try{
-          const dataUrl = await fileToDataURL(file);
-          textInput.value = dataUrl;
-          preview.style.backgroundImage = `url('${dataUrl}')`;
-          markDirty();
-          showToast("图片已载入，记得点应用修改");
-        }catch(e){
-          showToast("图片读取失败");
-        }
-      };
-      textInput.oninput = ()=>{
-        preview.style.backgroundImage = textInput.value ? `url('${textInput.value}')` : 'none';
-      };
-    }
-
-    function renderMultiImagePreview(name, values){
-      const preview = document.getElementById(`${name}Preview`);
-      if(!preview) return;
-      preview.innerHTML = (values || []).map((url, index)=>`
-        <div class="upload-preview-item" style="background-image:url('${escapeAttr(url)}')">
-          <button type="button" data-action="remove-image" data-index="${index}" title="删除这张图">×</button>
-        </div>
-      `).join("");
-    }
-
-    function bindMultiImageUpload(fileInputId, textInputName){
-      const fileInput = document.getElementById(fileInputId);
-      const textInput = document.querySelector(`[name="${textInputName}"]`);
-      if(!fileInput || !textInput) return;
-      const getValues = ()=> textInput.value.split(/\n+/).map(s=>s.trim()).filter(Boolean);
-      const setValues = (values)=>{
-        textInput.value = values.join("\n");
-        renderMultiImagePreview(textInputName, values);
-      };
-      fileInput.onchange = async ()=>{
-        const files = Array.from(fileInput.files || []);
-        if(!files.length) return;
-        try{
-          const dataUrls = await Promise.all(files.map(fileToDataURL));
-          setValues(getValues().concat(dataUrls));
-          fileInput.value = "";
-          markDirty();
-          showToast("图片已载入，记得点应用修改");
-        }catch(e){
-          showToast("图片读取失败");
-        }
-      };
-      textInput.oninput = ()=> setValues(getValues());
-      const preview = document.getElementById(`${textInputName}Preview`);
-      if(preview){
-        preview.onclick = (e)=>{
-          const btn = e.target.closest('[data-action="remove-image"]');
-          if(!btn) return;
-          const values = getValues();
-          values.splice(Number(btn.dataset.index), 1);
-          setValues(values);
-          markDirty();
-        };
-      }
-      setValues(getValues());
-    }
-
-    function escapeAttr(str){
-      return String(str ?? "").replace(/'/g, "&#39;");
-    }
-
-    function escapeHtml(str){
-      return String(str ?? "")
-        .replace(/&/g,"&amp;")
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;")
-        .replace(/"/g,"&quot;");
-    }
-
-    const sectionSchemas = {
-      site: {
-        title: "编辑站点信息",
-        path: "site",
-        fields: [
-          ["网站名称","siteName"],
-          ["副标题","siteSub"],
-          ["圆形图标文字","brandMarkText"],
-          ["圆形图标图片","brandMarkImage","image"],
-          ["页脚文案","footerText"]
-        ]
-      },
-      hero: {
-        title: "编辑首屏文案",
-        path: "hero",
-        fields: [
-          ["上方小标题","eyebrow"],
-          ["主标题","title","textarea"],
-          ["简介","desc","textarea"],
-          ["按钮一","btn1"],
-          ["按钮二","btn2"],
-          ["数字1","meta1Num"],
-          ["标签1","meta1Label"],
-          ["数字2","meta2Num"],
-          ["标签2","meta2Label"],
-          ["数字3","meta3Num"],
-          ["标签3","meta3Label"]
-        ]
-      },
-      heroVisual: {
-        title: "编辑首屏视觉",
-        path: "hero",
-        fields: [
-          ["背景图","visualImage","image"],
-          ["浮层标签","chip"],
-          ["视觉卡标题","noteTitle"],
-          ["视觉卡说明","noteText","textarea"],
-          ["下方标题","featureTitle"],
-          ["下方说明","featureText","textarea"]
-        ]
-      },
-      featured: {
-        title: "编辑主打区",
-        path: "featured",
-        fields: [["标题","title"],["说明","desc","textarea"]]
-      },
-      catalog: {
-        title: "编辑产品区",
-        path: "catalog",
-        fields: [["标题","title"],["说明","desc","textarea"]]
-      },
-      storyHead: {
-        title: "编辑故事区标题",
-        path: "storyHead",
-        fields: [["标题","title"],["说明","desc","textarea"]]
-      },
-      storyA: {
-        title: "编辑故事卡 A",
-        path: "storyA",
-        fields: [["标题","title"],["正文","text","textarea"]]
-      },
-      storyB: {
-        title: "编辑故事卡 B",
-        path: "storyB",
-        fields: [["标题","title"],["正文","text","textarea"]]
-      },
-      contactHead: {
-        title: "编辑联系区标题",
-        path: "contactHead",
-        fields: [["标题","title"],["说明","desc","textarea"]]
-      },
-      contactInfo: {
-        title: "编辑购买信息",
-        path: "contactInfo",
-        fields: [
-          ["区块标题","panelTitle"],
-          ["咨询微信","wechat"],
-          ["联系邮箱","email"],
-          ["领取点","pickup"],
-          ["发货说明","ship"]
-        ]
-      },
-      contactNote: {
-        title: "编辑购买须知",
-        path: "contactNote",
-        fields: [["标题","title"],["正文","text","textarea"],["按钮文案","btn"]]
-      },
-      footer: {
-        title: "编辑页脚",
-        path: "site",
-        fields: [["页脚文案","footerText"]]
-      }
-    };
-
-    function openSectionEditor(key){
-      if(!isAdmin) return;
-      currentEditKey = key;
-      currentProductId = null;
-      renderAdminProductList();
-      const schema = sectionSchemas[key];
-      if(!schema) return;
-      const obj = data[schema.path];
-      const wrap = document.getElementById("sectionEditorWrap");
-      let html = `<h4 style="margin:0 0 12px;">${schema.title}</h4><form id="sectionEditorForm" class="form-grid">`;
-      schema.fields.forEach(([label, name, type])=>{
-        if(type === "textarea") html += field(label, name, obj[name], "textarea");
-        else if(type === "image") html += imageUploadField(label, name, obj[name]);
-        else html += field(label, name, obj[name], "text");
-      });
-      html += `</form><div class="tiny-actions">
-        <button class="ghost-btn" id="saveSectionBtn">应用修改</button>
-      </div>`;
-      wrap.innerHTML = html;
-      document.getElementById("drawerTitle").textContent = schema.title;
-      if(key === "heroVisual") bindSingleImageUpload("visualImageFile", "visualImage", "visualImagePreview");
-      if(key === "site") bindSingleImageUpload("brandMarkImageFile", "brandMarkImage", "brandMarkImagePreview");
-      document.getElementById("saveSectionBtn").onclick = ()=>{
-        const form = document.getElementById("sectionEditorForm");
-        schema.fields.forEach(([_, name])=>{
-          obj[name] = form.elements[name].value;
-        });
-        renderAll();
-        markDirty();
-        showToast("区块内容已更新");
-      };
-    }
-
-    function openProductEditor(id){
-      if(!isAdmin) return;
-      currentProductId = id;
-      currentEditKey = null;
-      renderAdminProductList();
-      const p = data.products.find(x=>x.id===id);
-      if(!p) return;
-      const wrap = document.getElementById("sectionEditorWrap");
-      wrap.innerHTML = `
-        <h4 style="margin:0 0 12px;">编辑产品</h4>
-        <form id="productEditorForm" class="form-grid">
-          ${field("产品名称","name",p.name)}
-          ${field("短描述","shortDesc",p.shortDesc,"textarea")}
-          ${field("长描述","longDesc",p.longDesc,"textarea")}
-          <div class="inline-2">
-            ${field("价格","price",p.price)}
-            ${field("分类（玩偶/文具/配饰/生活家居）","category",p.category)}
-          </div>
-          <div class="inline-2">
-            ${field("标签","tag",p.tag)}
-            ${field("状态（在售/售罄）","status",p.status)}
-          </div>
-          <div class="inline-2">
-            ${field("材质","material",p.material)}
-            ${field("尺寸","size",p.size)}
-          </div>
-          <div class="inline-2">
-            ${imageUploadField("封面图","cover",p.cover)}
-            ${field("排序","sortOrder",String(p.sortOrder || ""),"number")}
-          </div>
-          ${multiImageUploadField("详情图","images", (p.images||[]))}
-          <div class="inline-2">
-            <div class="field">
-              <label>是否主打</label>
-              <select name="featured">
-                <option value="true" ${p.featured ? "selected" : ""}>是</option>
-                <option value="false" ${!p.featured ? "selected" : ""}>否</option>
-              </select>
-            </div>
-            <div class="field">
-              <label>是否显示</label>
-              <select name="visible">
-                <option value="true" ${p.visible ? "selected" : ""}>显示</option>
-                <option value="false" ${!p.visible ? "selected" : ""}>隐藏</option>
-              </select>
-            </div>
-          </div>
-        </form>
-        <div class="tiny-actions">
-          <button class="ghost-btn" id="applyProductBtn">应用修改</button>
-          <button class="ghost-btn" id="duplicateProductBtn">复制产品</button>
-          <button class="ghost-btn" id="deleteProductBtn">删除产品</button>
-        </div>
-      `;
-      document.getElementById("drawerTitle").textContent = "编辑产品";
-      bindSingleImageUpload("coverFile", "cover", "coverPreview");
-      bindMultiImageUpload("imagesFiles", "images");
-      document.getElementById("applyProductBtn").onclick = ()=>{
-        const form = document.getElementById("productEditorForm");
-        p.name = form.elements.name.value;
-        p.shortDesc = form.elements.shortDesc.value;
-        p.longDesc = form.elements.longDesc.value;
-        p.price = form.elements.price.value;
-        p.category = form.elements.category.value;
-        p.tag = form.elements.tag.value;
-        p.status = form.elements.status.value;
-        p.material = form.elements.material.value;
-        p.size = form.elements.size.value;
-        p.cover = form.elements.cover.value;
-        p.sortOrder = Number(form.elements.sortOrder.value || 999);
-        p.images = form.elements.images.value.split(/\n+/).map(s=>s.trim()).filter(Boolean);
-        p.featured = form.elements.featured.value === "true";
-        p.visible = form.elements.visible.value === "true";
-        renderAll();
-        markDirty();
-        showToast("产品已更新");
-      };
-      document.getElementById("duplicateProductBtn").onclick = ()=>{
-        const copy = JSON.parse(JSON.stringify(p));
-        copy.id = "p" + Date.now();
-        copy.name = copy.name + "（副本）";
-        copy.sortOrder = (copy.sortOrder || 0) + 1;
-        data.products.push(copy);
-        renderAll();
-        openProductEditor(copy.id);
-        markDirty();
-        showToast("已复制产品");
-      };
-      document.getElementById("deleteProductBtn").onclick = ()=>{
-        deleteProductById(p.id);
-      };
-    }
-
-    function addProduct(){
-      const id = "p" + Date.now();
-      const item = {
-        id,
-        name: "新产品",
-        shortDesc: "请填写产品简短描述。",
-        longDesc: "请填写产品详细描述。",
-        price: "¥0",
-        category: "玩偶",
-        featured: false,
-        visible: true,
-        status: "在售",
-        tag: "NEW",
-        material: "待填写",
-        size: "待填写",
-        cover: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80",
-        images: ["https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1200&q=80"],
-        sortOrder: data.products.length + 1
-      };
-      data.products.push(item);
-      renderAll();
-      openProductEditor(id);
-      markDirty();
-      showToast("已新增产品");
-    }
-
-    function exportJSON(){
-      const blob = new Blob([JSON.stringify(data, null, 2)], {type: "application/json"});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "deqiang-site-data.json";
-      a.click();
-      URL.revokeObjectURL(url);
-      showToast("JSON 已导出");
-    }
-
-    function importJSON(file){
-      const reader = new FileReader();
-      reader.onload = ()=>{
-        try{
-          const obj = JSON.parse(reader.result);
-          data = obj;
-          renderAll();
-          markDirty();
-          showToast("JSON 导入成功");
-        }catch(e){
-          showToast("JSON 文件格式错误");
-        }
-      };
-      reader.readAsText(file, "utf-8");
-    }
-
-    document.getElementById("adminEntry").onclick = openLogin;
-    document.getElementById("closeLogin").onclick = closeLogin;
-    document.getElementById("cancelLogin").onclick = closeLogin;
-    document.getElementById("submitLogin").onclick = login;
-    document.getElementById("closeDrawer").onclick = ()=>document.getElementById("editorDrawer").classList.remove("show");
-    document.getElementById("saveBtn").onclick = saveData;
-    document.getElementById("resetBtn").onclick = resetData;
-    document.getElementById("logoutBtn").onclick = logout;
-    document.getElementById("addProductBtn").onclick = addProduct;
-    document.getElementById("exportBtn").onclick = exportJSON;
-    document.getElementById("importBtn").onclick = ()=>document.getElementById("importInput").click();
-    document.getElementById("importInput").addEventListener("change", (e)=>{
-      const file = e.target.files[0];
-      if(file) importJSON(file);
-      e.target.value = "";
-    });
     document.getElementById("closeProduct").onclick = closeProductModal;
     document.getElementById("productModal").addEventListener("click", (e)=>{
       if(e.target.id === "productModal") closeProductModal();
     });
-    document.getElementById("loginModal").addEventListener("click", (e)=>{
-      if(e.target.id === "loginModal") closeLogin();
-    });
-
-    document.querySelectorAll(".editable").forEach(el=>{
-      el.addEventListener("click", ()=>{
-        const key = el.getAttribute("data-edit");
-        if(isAdmin && key){
-          document.getElementById("editorDrawer").classList.add("show");
-          openSectionEditor(key);
-        }
-      });
-    });
-
-    window.addEventListener("beforeunload", (e)=>{
-      if(dirty){
-        e.preventDefault();
-        e.returnValue = "";
-      }
-    });
 
     renderAll();
-    updateSaveState();
   </script>
+
 </body>
 </html>
